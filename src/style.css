@@ -1,0 +1,111 @@
+/*Todo o conteudo*/
+*{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  color: black;
+}
+
+/*todo o conteudo que esta na div.container*/
+.container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(rgb(39, 7, 153), rgb(55,2,143));
+}
+
+/*Titulo do buscar cep*/
+.title{
+  font-size: 85px;
+  color: #fff;
+  animation: flipTitle 2s;
+}
+
+/*Animação do titulo*/
+@keyframes flipTitle{
+  from{
+     transform: rotateX(90deg);
+  }
+  to{
+      transform: rotateX(0deg);
+  }
+}
+
+/*Conteudo da div .containerInput*/
+.containerInput{
+   background-color: rgb(104, 21, 200);
+   border-radius: 8px;
+   margin: 34px 0;
+   padding: 15px;
+   display: flex;
+   box-shadow: 1px 3px 3px rgba(0,0,0, 0.5);
+}
+
+/*Conteudo do somente do input*/
+.containerInput input{
+  background-color: transparent;
+  border: 0;
+  font-size: 20px;
+  color: #fff;
+  outline: none;
+  margin-right: 8px;
+}
+
+/*Cor do "digite seu cep" */
+.containerInput input::placeholder{
+  color: #f1f1f1;
+}
+
+/*Botao com a lupa*/
+.buttonSearch{
+  background-color: transparent;
+  border: 0;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+/*Efeito de zoom*/
+.buttonSearch:hover{
+  transform: scale(1.2);
+}
+
+/*conteudo do main*/
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  width: 500px;
+  border-radius: 8px;
+}
+
+/*Titulo*/
+.main h2{
+  margin: 16px 0;
+  font-size: 39px;
+}
+
+/*Span*/
+.main span{
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+/*Responsividade*/
+@media (max-widt:520px){
+  .title{
+    font-size: 45px;
+  }
+  .main h2{
+    font-size: 20px;
+  }
+  .main{
+    width: 80%;
+    min-height: 250px;
+  }
+}
